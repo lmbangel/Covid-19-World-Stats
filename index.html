@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body class="" >
+        <div class="nav-bar bg-white shadow-md">
+            <header class="h-16 lg:-mr-12">
+                <div class="hidden lg:flex justify-center">
+                    <ul class="lg:flex justify-center items-center pt-4">
+                        <li class="mr-32">
+                            <a class="nav-item hover:text-teal-400 focus:outline-none pb-2" href="#app" >Statistics</a>
+                        </li>
+                        <li class="mr-32">
+                            <a class="nav-item hover:text-teal-400 focus:outline-none pb-2" href="#safety-tips" >Safety Tips</a>
+                        </li>
+                        <li class="mr-32">
+                            <a class="nav-item hover:text-teal-400 focus:outline-none pb-2" href="#" >News</a>
+                        </li>
+                    </ul>
+                    <div class="w-full max-w-sm flex items-center border-b border-b-2 border-teal-500 py-2">
+                        <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Search" aria-label="Full name">
+                        <button class="focus:outline-none flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                            Search
+                        </button>
+                    </div>
+                </div>
+                <div class="float-right mr-4 mt-4 lg:hidden">
+                    <button onClick="navDropDown()" class="focus:outline-none">
+                        <img class="h-8 w-8" src="./src/menu-line.svg" alt="">
+                    </button>
+                </div>
+            </header>
+            <div id="nav-dropdown" class="h-auto"></div>
+        </div>
+        <div style="background-image: url('./src/coronaVirus.jpg'); background-position: left; background-repeat: no-repeat;">
+            <div class="text-4xl pt-6 mb-6 text-center lg:text-6xl ">
+                <h1>#StayHome!</h1>
+            </div>
+            <div id="hero" class="flex flex-wrap md:flex-no-wrap w-full">
+                <div class="mx-auto md:ml-16 md:mr-8 w-10/12">
+                    <img class="" src="./src/united-nations-covid-19-response-b7Es9ZMdORo-unsplash.jpg" alt="Know the Symptoms for Corona virus (Covid-19)">
+                    <a href="https://www.unicef.org/southafrica/reports/coronavirus-covid-19-how-can-i-avoid-risk-infection">
+                        <button class="shadow-lg bg-green-100 rounded-sm hover:bg-teal-200 text-sm border border-green-400 mt-4 mx-auto p-2 focus:outline-none">
+                            Learn More
+                        </button>
+                    </a>
+                </div>
+                <div class="mt-8 mb-2 lg:my-auto mx-6 lg:mr-24 lg:pr-24">
+                    <p class="text-2xl font-hairline lg:text-3xl">Stats of Covid-19 Cases Per Country</p>
+                    <p class="text-lg lg:text-xl">These are reported Covid-19 cases as of current day.
+                        These stats do not in any way replace the information from your local<span class="md:hidden" id="elipse">...</span> 
+                        <span class="hidden md:inline"id="show-more">trusted sources.
+                        They merely purpose to help inform on a wider perspective, therefore please look to local sources
+                        for more accurate information. </span>
+                    </p>
+                    <a class="font-hairline text-blue-700 text-sm md:hidden" onClick="readdMoreFunction()"  href="javascript:;" id="show-more-btn">read more </a>
+                </div>
+            </div>
+        </div>
+        <div id="app" class="grid grid-cols-1 mx-2 md:grid-cols-2 lg:grid-cols-3 md:px-12"></div>
+        <div class="text-center">
+            <input class="bg-green-100 border border-green-500 shadow-md rounded-sm px-4 focus:outline-none hover:bg-teal-200" type="button" id="first" value="first" />
+            <input class="bg-green-100 border border-green-500 shadow-md rounded-sm px-4 focus:outline-none hover:bg-teal-200" type="button" id="next" value="next" />
+            <input class="bg-green-100 border border-green-500 shadow-md rounded-sm px-4 focus:outline-none hover:bg-teal-200" type="button" id="previous" value="previous" />
+            <input class="bg-green-100 border border-green-500 shadow-md rounded-sm px-4 focus:outline-none hover:bg-teal-200" type="button" id="last" value="last" />
+        </div>
+        <div class="mt-16 mb-8 mx-6 lg:text-center">
+            <p class="text-3xl font-hairline">Safety Tips</p>
+            <p class="font-bold ">Protect yourself and your loved ones by keeping safe  with the help of these tips</p>
+        </div>
+        <div class=" border-2 rounded-t-lg mb-8 mx-4 text-lg">
+            <img class="w-full" src="./src/coronavirus-banner3.png" alt="Tips to help you keep safe from Covid 19">
+            <div id="safety-tips" class="lg:mx-20 text-gray-700 my-8 italic">
+                <p class="mb-8 lg:text-2xl text-black text-center md:text-left ">Protect yourself and others from the spread COVID-19</p>   
+            </div>
+        </div>
+        <div class="flex mt-32 bg-gray-200 h-40">
+            <p class="italic self-center -mb-32 mx-auto ">@2020 Lihle Mbangela</p>
+        </div>
+    </body>
+    <script src="./js/app.js"></script>
+    <script src="./js/api.js"></script>
+</html>
