@@ -9,9 +9,7 @@ html{
 .nav-item:focus{
     border-bottom: 2px solid rgb(6, 192, 192);
 }
-#nav-dropdown{
-    
-}
+
 input[type=button]{
     cursor: pointer;
 }
